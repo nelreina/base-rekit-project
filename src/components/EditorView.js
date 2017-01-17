@@ -11,12 +11,13 @@ export default class EditorView extends PureComponent {
 		if (raw) {
 			editorState = EditorState.createWithContent(convertFromRaw(raw))
 		}
+		// toolbarOnFocus
     return (
       <div className="">
         <Editor
-					toolbarOnFocus
 					readOnly={true}
 					editorState={editorState}
+					toolbarStyle={{display: 'none'}}
 					/>
       </div>
     );

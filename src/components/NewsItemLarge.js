@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import { Item  } from 'semantic-ui-react';
-import EditorView from '../../components/EditorView';
+import EditorView from './EditorView';
 import moment from 'moment';
-const MyItem = ({ item }) => {
+const NewsItemLarge = ({ item }) => {
 	return (
 		<Item.Group>
 			<Item>
@@ -22,4 +22,4 @@ const MyItem = ({ item }) => {
 	)
 }
 
-export default MyItem
+export default NewsItemLarge

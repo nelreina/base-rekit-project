@@ -1,19 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router';
+import { Item } from 'semantic-ui-react';
+import { browserHistory } from 'react-router';
+
+import NewsItemSmall from '../../components/NewsItemSmall';
 
 const ItemList = ({ list }) => {
+	const linkTo = (id) => {
+		console.log(id);
+		browserHistory.push('/items/page/' + id);
+	};
 	return (
-		<div className="ui list">
+		<Item.Group divided >
 			{
 				list.map((item, idx) =>(
-					<div key={idx} className="item">
-						<Link to={`/items/page/${item.id}`}>{item.title}</Link>
-						<br/>
-						{item.short}
-					</div>
+						<NewsItemSmall key={idx} item={item} path="/items/page" />
 				))
 			}
-		</div>
+		</Item.Group>
 	)
 }
 

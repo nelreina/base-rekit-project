@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 
 
-import Item from './Item';
+import NewsItemLarge from '../../components/NewsItemLarge';
 import * as actions from './redux/actions';
 
 export class Single extends Component {
@@ -21,7 +21,7 @@ export class Single extends Component {
     return (
       <div className="items-single">
 				<Link to="/items">Back to List</Link>
-				{ item && <Item item={item}/>}
+				{ item && <NewsItemLarge item={item}/>}
       </div>
     );
   }
