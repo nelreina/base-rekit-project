@@ -1,1 +1,2 @@
 export const ITEMS_SAMPLE_ACTION = 'ITEMS_SAMPLE_ACTION';
+export const ITEMS_SAVE = 'ITEMS_SAVE';

@@ -1,8 +1,10 @@
 import initialState from './initialState';
 import { reducer as sampleAction } from './sampleAction';
+import { reducer as save } from './save';
 
 const reducers = [
   sampleAction,
+  save,
 ];
 
 export default function reducer(state = initialState, action) {

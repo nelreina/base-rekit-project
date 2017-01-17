@@ -1,5 +1,7 @@
 import {
   DefaultPage,
+  Single,
+  Form,
 } from './index';
 
 export default {
@@ -7,5 +9,7 @@ export default {
   name: 'Items',
   childRoutes: [
     { path: 'default-page', name: 'Default page', component: DefaultPage, isIndex: true },
+    { path: '/:id', name: 'Single', component: Single },
+    { path: 'form', name: 'Form', component: Form },
   ],
 };
