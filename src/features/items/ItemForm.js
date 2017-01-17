@@ -18,6 +18,7 @@ class ItemForm extends Component {
 		return (
 			<Form onSubmit={handleSubmit(this.handleSubmit)}>
 				<Field name="title" placeholder="title" component={FieldText} />
+				<Field name="cover" placeholder="Cover Image URL" component={FieldText} />
 				<Field name="editor" placeholder="Editor" component={FieldEditor} />
 				<Button>Save</Button>
 				<Link to={listPath}>Cancel</Link>

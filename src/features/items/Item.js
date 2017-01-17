@@ -6,9 +6,9 @@ const MyItem = ({ item }) => {
 	return (
 		<Item.Group>
 			<Item>
-				{/* <Item.Image size='tiny' src='http://semantic-ui.com/images/wireframe/image.png' /> */}
 
 				<Item.Content>
+					<Item.Image src={item.cover} />
 					<Item.Header as="h1">{item.title}</Item.Header>
 					<Item.Meta>
 						<span className='stay'>{moment(item.createdAt).format('MMMM DD, YYYY')}</span>
