@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 import * as actions from './redux/actions';
 
 import ItemList from './ItemList';
@@ -19,6 +20,7 @@ export class DefaultPage extends Component {
 		const { items: { list } } = this.props;
 		return (
 			<div className="items-default-page">
+				<Link className="ui button inverted green" to="/items/new">+ Nobo</Link>
 				{ list && <ItemList list={list}/>}
 			</div>
 		);

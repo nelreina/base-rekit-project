@@ -10,6 +10,6 @@ export default {
 	childRoutes: [
 		{ path: 'default-page', name: 'Default page', component: DefaultPage, isIndex: true },
 		{ path: 'page/:id', name: 'Single', component: Single },
-		{ path: 'form', name: 'Form', component: Form },
+		{ path: 'new', name: '+ New', component: Form },
 	],
 };
