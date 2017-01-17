@@ -1,10 +1,12 @@
 import initialState from './initialState';
-import { reducer as sampleAction } from './sampleAction';
-import { reducer as save } from './save';
+import { reducer as fetchList } from './fetchList';
+import { reducer as createItem } from './createItem';
+import { reducer as fetchItem } from './fetchItem';
 
 const reducers = [
-  sampleAction,
-  save,
+  fetchList,
+  createItem,
+  fetchItem,
 ];
 
 export default function reducer(state = initialState, action) {

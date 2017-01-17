@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const API = 'http://localhost:7000/api';
+const API = 'http://localhost:7001/api';
 
 export const get = (path) => new Promise((resolve, reject) => {
 	axios.get(`${API}/${path}`)

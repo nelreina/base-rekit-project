@@ -3,36 +3,43 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actions from './redux/actions';
 
-export class DefaultPage extends Component {
-  static propTypes = {
-    items: PropTypes.object.isRequired,
-    actions: PropTypes.object.isRequired,
-  };
+import ItemList from './ItemList';
 
-  render() {
-    return (
-      <div className="items-default-page">
-        Page Content: items/DefaultPage
-      </div>
-    );
-  }
+export class DefaultPage extends Component {
+	static propTypes = {
+		items: PropTypes.object.isRequired,
+		actions: PropTypes.object.isRequired,
+	};
+
+	componentWillMount = () => {
+		const { actions } = this.props;
+		actions.fetchList();
+	}
+	render() {
+		const { items: { list } } = this.props;
+		return (
+			<div className="items-default-page">
+				{ list && <ItemList list={list}/>}
+			</div>
+		);
+	}
 }
 
 /* istanbul ignore next */
 function mapStateToProps(state) {
-  return {
-    items: state.items,
-  };
+	return {
+		items: state.items,
+	};
 }
 
 /* istanbul ignore next */
 function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators({ ...actions }, dispatch)
-  };
+	return {
+		actions: bindActionCreators({ ...actions }, dispatch)
+	};
 }
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(DefaultPage);

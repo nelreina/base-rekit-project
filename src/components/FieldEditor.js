@@ -29,11 +29,11 @@ export default class UiFieldEditor extends PureComponent {
 	}
 
 	render() {
-		const { input, placeholder } = this.props;
+		const { input } = this.props;
 		const { editorState } = this.state;
 		return (
 			<div style={style} className="common-ui-field-editor">
-				<Editor  {...input} placeholder={placeholder} onChange={this.onChange} editorState={editorState} />
+				<Editor  {...input}  onChange={this.onChange} editorState={editorState} />
 			</div>
 		);
 	}

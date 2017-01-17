@@ -13,7 +13,7 @@ export default class SimpleNav extends PureComponent {
 
 	renderLinks(items, basePath) {
 		return (
-			<ul>
+			<div className="ui list">
 				{
 					items.reduce((prev, item) => {
 
@@ -26,15 +26,15 @@ export default class SimpleNav extends PureComponent {
 							path = `${basePath}/${item.path}`;
 						}
 						if (!/Default/.test(item.name) && !/\:|^\+/.test(item.path)) {
-							prev.push(<li key={path}><Link to={path}>{item.name || item.path}</Link></li>);
+							prev.push(<div className="item" key={path}><Link to={path}>{item.name || item.path}</Link></div>);
 						}
 						if (item.childRoutes && item.childRoutes.length ) {
-							prev.push(<li key={`${path}_wrapper`}>{this.renderLinks(item.childRoutes, path)}</li>);
+							prev.push(<div className="item" key={`${path}_wrapper`}>{this.renderLinks(item.childRoutes, path)}</div>);
 						}
 						return prev;
 					}, [])
 				}
-			</ul>
+			</div>
 		);
 	}
 

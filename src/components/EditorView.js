@@ -5,9 +5,9 @@ export default class EditorView extends PureComponent {
 
   render() {
 		let editorState = EditorState.createEmpty();
-		const { draftjs } = this.props;
-		if (draftjs) {
-			editorState = EditorState.createWithContent(convertFromRaw(draftjs))
+		const { raw } = this.props;
+		if (raw) {
+			editorState = EditorState.createWithContent(convertFromRaw(raw))
 		}
     return (
       <div className="">
