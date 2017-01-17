@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
-import {Editor, EditorState, convertFromRaw} from 'draft-js';
+import { Editor } from 'react-draft-wysiwyg';
+
+import {  EditorState, convertFromRaw } from 'draft-js';
 
 export default class EditorView extends PureComponent {
 
@@ -11,7 +13,11 @@ export default class EditorView extends PureComponent {
 		}
     return (
       <div className="">
-        <Editor readOnly={true} editorState={editorState} />
+        <Editor
+					toolbarOnFocus
+					readOnly={true}
+					editorState={editorState}
+					/>
       </div>
     );
 	}
