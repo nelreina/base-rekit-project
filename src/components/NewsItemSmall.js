@@ -8,7 +8,7 @@ const NewsItemSmall = ({ item, path }) => {
 				<Item.Image size='small' src={item.cover} />
 
 				<Item.Content>
-					<Item.Header as="h1">{item.title}</Item.Header>
+					<Item.Header >{item.title}</Item.Header>
 					<Item.Meta>
 						<small className='stay'>{moment(item.createdAt).format('MMMM DD, YYYY hh:mm')}</small>
 					</Item.Meta>

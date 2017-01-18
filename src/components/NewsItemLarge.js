@@ -8,11 +8,11 @@ const NewsItemLarge = ({ item }) => {
 			<Item>
 
 				<Item.Content>
-					<Item.Image src={item.cover} />
 					<Item.Header as="h1">{item.title}</Item.Header>
 					<Item.Meta>
 						<small className='stay'>{moment(item.createdAt).format('MMMM DD, YYYY')}</small>
 					</Item.Meta>
+					<Item.Image  size="big" src={item.cover} />
 					<Item.Description>
 						<EditorView raw={item.editor}/>
 					</Item.Description>
