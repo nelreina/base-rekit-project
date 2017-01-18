@@ -10,7 +10,7 @@ const NewsItemSmall = ({ item, path }) => {
 				<Item.Content>
 					<Item.Header as="h1">{item.title}</Item.Header>
 					<Item.Meta>
-						<span className='stay'>{moment(item.createdAt).format('MMMM DD, YYYY hh:mm')}</span>
+						<small className='stay'>{moment(item.createdAt).format('MMMM DD, YYYY hh:mm')}</small>
 					</Item.Meta>
 					<Item.Description>
 						{item.short}
